@@ -1,5 +1,4 @@
 param(
-    [Parameter(Mandatory=$true)]
     [string]$InputDir,
     [string]$OutputRoot = "C:\modscan",
     [string]$ToolsRoot = "$env:USERPROFILE\decompiler-tools",
@@ -8,6 +7,19 @@ param(
     [int]$HighConfidenceThreshold = 2,
     [switch]$Overwrite
 )
+
+# Если путь не указан, запрашиваем у пользователя
+if ([string]::IsNullOrEmpty($InputDir)) {
+    Write-Host "📁 Введите путь к папке с модами для анализа:" -ForegroundColor Yellow
+    $InputDir = Read-Host "Путь"
+    
+    # Проверяем, что путь существует
+    while (-not (Test-Path $InputDir)) {
+        Write-Host "❌ Указанная папка не существует!" -ForegroundColor Red
+        Write-Host "📁 Введите корректный путь к папке с модами:" -ForegroundColor Yellow
+        $InputDir = Read-Host "Путь"
+    }
+}
 
 $CfrUrl = "https://github.com/leibnitz27/cfr/releases/download/0.152/cfr-0.152.jar"
 $CfrLocalPath = Join-Path $ToolsRoot $CfrFileName
@@ -435,11 +447,13 @@ function Extract-Classes {
 
     Download-CFR -destPath $CfrLocalPath -url $CfrUrl
 
-    $jarFiles = Get-ChildItem -Path $InputDir -Recurse -Filter *.jar -File
+    # Ищем только в указанной папке, без рекурсии в системные директории
+    $jarFiles = Get-ChildItem -Path $InputDir -Filter *.jar -File
     Write-Host "Найдено JAR файлов: $($jarFiles.Count)" -ForegroundColor Cyan
 
     if ($jarFiles.Count -eq 0) {
         Write-Error "❌ JAR файлы не найдены в указанной директории"
+        Write-Host "Убедитесь, что в папке '$InputDir' есть .jar файлы модов" -ForegroundColor Yellow
         exit 1
     }
 
@@ -673,92 +687,4 @@ function Analyze-Classes {
                     Write-Host ""
                 }
             }
-        } else {
-            Write-Host "  Обнаружено совпадений: 0" -ForegroundColor Green
-        }
-        
-        if ($jarResult.ObfuscationTypes.Count -gt 0) {
-            Write-Host "  Обфускация: " -NoNewline -ForegroundColor Gray
-            $obfTypes = ($jarResult.ObfuscationTypes.GetEnumerator() | Sort-Object Value -Descending | Select-Object -First 3).Key -join ", "
-            Write-Host $obfTypes -ForegroundColor Magenta
-        }
-        
-        Write-Host ""
-    }
-    
-    Write-Host "=" * 70 -ForegroundColor Cyan
-    Write-Host "                     СВОДКА АНАЛИЗА" -ForegroundColor Yellow
-    Write-Host "=" * 70 -ForegroundColor Cyan
-    
-    Write-Host "📊 Общая статистика:" -ForegroundColor White
-    Write-Host "   Всего JAR файлов: $($jarFolders.Count)" -ForegroundColor Cyan
-    Write-Host "   🚨 Высокая угроза: $($threatSummary.HIGH)" -ForegroundColor Red
-    Write-Host "   ⚠  Средняя угроза: $($threatSummary.MEDIUM)" -ForegroundColor Yellow
-    Write-Host "   🔍 Низкая угроза: $($threatSummary.LOW)" -ForegroundColor Magenta
-    Write-Host "   ✅ Чистые: $($threatSummary.CLEAN)" -ForegroundColor Green
-    Write-Host "   🎭 Обфусцированные: $($threatSummary.OBFUSCATED)" -ForegroundColor Magenta
-    
-    $allDetections = $analysisResults | ForEach-Object { $_.CheatResults } | Group-Object CheatCategory | Sort-Object Count -Descending
-    
-    if ($allDetections.Count -gt 0) {
-        Write-Host "`n📈 Статистика по категориям читов:" -ForegroundColor White
-        foreach ($detection in $allDetections) {
-            $highCount = ($detection.Group | Where-Object { $_.Confidence -eq "HIGH" }).Count
-            Write-Host "   - $($detection.Name): $($detection.Count) обнаружений ($highCount высокой уверенности)" -ForegroundColor Cyan
-        }
-    }
-    
-    if ($threatSummary.HIGH -gt 0) {
-        Write-Host "`n🚨 ВНИМАНИЕ: Обнаружены файлы с высокой угрозой!" -ForegroundColor Red -BackgroundColor Black
-        $highThreatJars = $analysisResults | Where-Object { $_.ThreatLevel -eq "HIGH" }
-        Write-Host "   Подозрительные файлы:" -ForegroundColor Yellow
-        foreach ($jar in $highThreatJars) {
-            Write-Host "   - $($jar.JarName)" -ForegroundColor Red
-        }
-    } else {
-        Write-Host "`n✅ Высокорисковые читы не обнаружены" -ForegroundColor Green
-    }
-    
-    return $analysisResults
-}
-
-function Cleanup-ExtractedClasses {
-    param([string]$ExtractedPath)
-    
-    Write-Host "`n" + "=" * 70 -ForegroundColor Cyan
-    Write-Host "             ЭТАП 3: ОЧИСТКА ВРЕМЕННЫХ ФАЙЛОВ" -ForegroundColor Yellow
-    Write-Host "=" * 70 -ForegroundColor Cyan
-    
-    if (Test-Path $ExtractedPath) {
-        try {
-            Remove-Item -Path $ExtractedPath -Recurse -Force
-            Write-Host "✅ Временные файлы удалены: $ExtractedPath" -ForegroundColor Green
-        } catch {
-            Write-Host "⚠️  Не удалось удалить временные файлы: $($_.Exception.Message)" -ForegroundColor Yellow
-        }
-    } else {
-        Write-Host "ℹ️  Временные файлы уже удалены" -ForegroundColor Gray
-    }
-}
-
-function Start-Analysis {
-    Write-Host "🚀 ЗАПУСК АВТОМАТИЗИРОВАННОГО АНАЛИЗА МОДОВ" -ForegroundColor Magenta
-    Write-Host "Версия: 2.1 | Расширенное обнаружение хитбоксов" -ForegroundColor Gray
-    Write-Host ""
-
-    if (-not (Test-Path $InputDir)) {
-        Write-Error "❌ Входная директория не существует: $InputDir"
-        exit 1
-    }
-
-    $extractedPath = Extract-Classes
-    $analysisResults = Analyze-Classes -SourceDirectory $extractedPath
-    Cleanup-ExtractedClasses -ExtractedPath $extractedPath
-
-    Write-Host "`n🎉 ВЕСЬ ПРОЦЕСС ЗАВЕРШЕН!" -ForegroundColor Green
-    Write-Host "Для повторного анализа запустите скрипт с параметром -Overwrite" -ForegroundColor Gray
-    
-    return $analysisResults
-}
-
-$analysisResults = Start-Analysis
+       
