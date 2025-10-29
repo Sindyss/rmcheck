@@ -1,90 +1,787 @@
 Clear
 
-$embeddedEncrypted = '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
-'
+param(
+    [Parameter(Mandatory=$true)]
+    [string]$InputDir,
+    
+    [string]$OutputRoot = "C:\modscan",
+    [string]$ToolsRoot = "$env:USERPROFILE\decompiler-tools",
+    [string]$CfrFileName = "cfr.jar",
+    [int]$ContextLines = 5,
+    [int]$HighConfidenceThreshold = 2,
+    [switch]$Overwrite
+)
 
-function New-AesFromKey {
-    param([string]$key)
-    $aes = [System.Security.Cryptography.Aes]::Create()
-    $keyBytes = [System.Text.Encoding]::UTF8.GetBytes(($key.PadRight(32,'X').Substring(0,32)))
-    $aes.Key = $keyBytes
-    $aes.Mode = [System.Security.Cryptography.CipherMode]::CBC
-    $aes.Padding = [System.Security.Cryptography.PaddingMode]::PKCS7
-    return $aes
+$CfrUrl = "https://github.com/leibnitz27/cfr/releases/download/0.152/cfr-0.152.jar"
+$CfrLocalPath = Join-Path $ToolsRoot $CfrFileName
+
+$CheatMappings = @{
+    "Hitbox" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "m_20011_"},
+            @{Type = "method"; Pattern = "func_174813_aQ"},
+            @{Type = "method"; Pattern = "setBoundingBox"},
+            @{Type = "method"; Pattern = "getEntityBoundingBox"},
+            @{Type = "method"; Pattern = "setEntityBoundingBox"},
+            @{Type = "method"; Pattern = "getBoundingBox"},
+            
+            @{Type = "method"; Pattern = "boundingBox.*expand"},
+            @{Type = "method"; Pattern = "boundingBox.*grow"},
+            @{Type = "method"; Pattern = "boundingBox.*scale"},
+            @{Type = "method"; Pattern = "boundingBox.*multiply"},
+            @{Type = "method"; Pattern = "expand.*boundingBox"},
+            @{Type = "method"; Pattern = "grow.*boundingBox"},
+            @{Type = "method"; Pattern = "scale.*boundingBox"},
+            
+            @{Type = "method"; Pattern = "minX\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "maxX\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "minY\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "maxY\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "minZ\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "maxZ\s*[\-\+]\s*[\d\.]"},
+            
+            @{Type = "method"; Pattern = "minX\s*=\s*.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "maxX\s*=\s*.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "minY\s*=\s*.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "maxY\s*=\s*.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "minZ\s*=\s*.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "maxZ\s*=\s*.*[\-\+].*[\d\.]"},
+            
+            @{Type = "method"; Pattern = "cD\(\)\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "cH\(\)\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "cc\(\).b"},
+            @{Type = "method"; Pattern = "cc\(\).e"},
+            
+            @{Type = "method"; Pattern = "new dci\(.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "new AABB\(.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "dci\(.*[\-\+].*[\d\.]"},
+            @{Type = "method"; Pattern = "AABB\(.*[\-\+].*[\d\.]"},
+            
+            @{Type = "field"; Pattern = "field_72338_b"},
+            @{Type = "field"; Pattern = "field_72337_e"},
+            @{Type = "field"; Pattern = "field_72333_a"},
+            @{Type = "field"; Pattern = "field_72336_d"},
+            
+            @{Type = "method"; Pattern = "expandHitbox"},
+            @{Type = "method"; Pattern = "growHitbox"},
+            @{Type = "method"; Pattern = "resizeHitbox"},
+            @{Type = "method"; Pattern = "modifyHitbox"},
+            @{Type = "method"; Pattern = "changeHitbox"},
+            @{Type = "method"; Pattern = "setHitbox"},
+            @{Type = "method"; Pattern = "getHitbox"},
+            @{Type = "method"; Pattern = "updateHitbox"},
+            @{Type = "method"; Pattern = "adjustHitbox"},
+            
+            @{Type = "method"; Pattern = "collisionBox"},
+            @{Type = "method"; Pattern = "getCollisionBox"},
+            @{Type = "method"; Pattern = "setCollisionBox"},
+            @{Type = "method"; Pattern = "collisionBoundingBox"},
+            
+            @{Type = "method"; Pattern = "size.*hitbox"},
+            @{Type = "method"; Pattern = "hitbox.*size"},
+            @{Type = "method"; Pattern = "setSize.*hitbox"},
+            @{Type = "method"; Pattern = "hitbox.*width"},
+            @{Type = "method"; Pattern = "hitbox.*height"},
+            @{Type = "method"; Pattern = "hitbox.*scale"},
+            
+            @{Type = "method"; Pattern = "player.*boundingBox"},
+            @{Type = "method"; Pattern = "entity.*boundingBox"},
+            @{Type = "method"; Pattern = "player.*a\(.*dci"},
+            @{Type = "method"; Pattern = "entity.*a\(.*dci"},
+            @{Type = "method"; Pattern = "attack.*boundingBox"},
+            @{Type = "method"; Pattern = "hitbox.*reach"},
+            @{Type = "method"; Pattern = "reach.*hitbox"},
+            
+            @{Type = "method"; Pattern = "flag.*[\d\.]"},
+            @{Type = "method"; Pattern = "hitbox.*flag"},
+            @{Type = "method"; Pattern = "config.*hitbox"},
+            @{Type = "method"; Pattern = "hitbox.*config"},
+            @{Type = "method"; Pattern = "setting.*hitbox"},
+            @{Type = "method"; Pattern = "hitbox.*setting"},
+            
+            @{Type = "method"; Pattern = "minX\s*[\-\+]\s*\w+\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "maxX\s*[\-\+]\s*\w+\s*[\-\+]\s*[\d\.]"},
+            @{Type = "method"; Pattern = "Math\.max.*minX"},
+            @{Type = "method"; Pattern = "Math\.min.*maxX"},
+            @{Type = "method"; Pattern = "minX\s*=\s*Math\."},
+            @{Type = "method"; Pattern = "maxX\s*=\s*Math\."}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "dci"},
+            @{Type = "method"; Pattern = "AABB"},
+            @{Type = "method"; Pattern = "cD\(\)"},
+            @{Type = "method"; Pattern = "cH\(\)"},
+            @{Type = "method"; Pattern = "cc\(\)"},
+            @{Type = "method"; Pattern = "a\("},
+            @{Type = "method"; Pattern = "boundingBox"},
+            @{Type = "method"; Pattern = "hitbox"},
+            @{Type = "method"; Pattern = "collision"},
+            @{Type = "method"; Pattern = "expand"},
+            @{Type = "method"; Pattern = "grow"},
+            @{Type = "method"; Pattern = "resize"},
+            @{Type = "method"; Pattern = "size"},
+            @{Type = "method"; Pattern = "flag"},
+            @{Type = "method"; Pattern = "scale"},
+            @{Type = "method"; Pattern = "multiply"},
+            @{Type = "method"; Pattern = "adjust"},
+            @{Type = "method"; Pattern = "modify"},
+            @{Type = "method"; Pattern = "minX"},
+            @{Type = "method"; Pattern = "maxX"},
+            @{Type = "method"; Pattern = "minY"},
+            @{Type = "method"; Pattern = "maxY"},
+            @{Type = "method"; Pattern = "minZ"},
+            @{Type = "method"; Pattern = "maxZ"}
+        )
+    }
+    
+    "TriggerBot" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "clickMouse"},
+            @{Type = "method"; Pattern = "attackEntity"},
+            @{Type = "method"; Pattern = "func_78764_a"},
+            @{Type = "method"; Pattern = "autoAttack"},
+            @{Type = "method"; Pattern = "triggerBot"},
+            @{Type = "method"; Pattern = "trigger"},
+            @{Type = "method"; Pattern = "autoClick"},
+            @{Type = "method"; Pattern = "doAttack"},
+            @{Type = "method"; Pattern = "onAttack"},
+            @{Type = "method"; Pattern = "checkTarget"},
+            @{Type = "method"; Pattern = "shouldAttack"},
+            @{Type = "method"; Pattern = "attackIfValid"},
+            @{Type = "method"; Pattern = "triggerKey"},
+            @{Type = "method"; Pattern = "autoTrigger"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "attack.*delay"},
+            @{Type = "method"; Pattern = "target.*entity"},
+            @{Type = "method"; Pattern = "entity.*target"},
+            @{Type = "method"; Pattern = "rayTrace"},
+            @{Type = "method"; Pattern = "lookingAt"},
+            @{Type = "method"; Pattern = "crosshair"},
+            @{Type = "method"; Pattern = "auto.*attack"},
+            @{Type = "method"; Pattern = "mouse.*click"},
+            @{Type = "method"; Pattern = "leftClick"}
+        )
+    }
+    
+    "Reach" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "getReachDistance"},
+            @{Type = "method"; Pattern = "func_110148_a"},
+            @{Type = "method"; Pattern = "extendReach"},
+            @{Type = "method"; Pattern = "attackRange"},
+            @{Type = "method"; Pattern = "blockReachDistance"},
+            @{Type = "method"; Pattern = "entityReach"},
+            @{Type = "method"; Pattern = "reach.*distance"},
+            @{Type = "method"; Pattern = "distance.*modif"},
+            @{Type = "method"; Pattern = "setReach"},
+            @{Type = "method"; Pattern = "modifyReach"},
+            @{Type = "method"; Pattern = "getAttackRange"},
+            @{Type = "method"; Pattern = "range.*extend"},
+            @{Type = "method"; Pattern = "combatRange"},
+            @{Type = "method"; Pattern = "hitRange"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "blockReach"},
+            @{Type = "method"; Pattern = "distance.*modif"},
+            @{Type = "method"; Pattern = "range.*increase"},
+            @{Type = "method"; Pattern = "attack.*range"},
+            @{Type = "method"; Pattern = "player.*reach"},
+            @{Type = "method"; Pattern = "entity.*distance"},
+            @{Type = "method"; Pattern = "target.*range"}
+        )
+    }
+    
+    "GlowESP" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "m_146915_"},
+            @{Type = "method"; Pattern = "setGlowing"},
+            @{Type = "method"; Pattern = "func_184195_f"},
+            @{Type = "method"; Pattern = "glowing.*true"},
+            @{Type = "method"; Pattern = "setOutline"},
+            @{Type = "method"; Pattern = "enableGlow"},
+            @{Type = "method"; Pattern = "addGlow"},
+            @{Type = "method"; Pattern = "makeGlow"},
+            @{Type = "method"; Pattern = "glowEffect"},
+            @{Type = "method"; Pattern = "entityGlow"},
+            @{Type = "method"; Pattern = "outlineEntity"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "outline"},
+            @{Type = "method"; Pattern = "entityOutline"},
+            @{Type = "method"; Pattern = "renderOutline"},
+            @{Type = "method"; Pattern = "glow"},
+            @{Type = "method"; Pattern = "highlight"},
+            @{Type = "method"; Pattern = "esp"},
+            @{Type = "method"; Pattern = "chams"},
+            @{Type = "method"; Pattern = "wallhack"}
+        )
+    }
+    
+    "AutoTotem" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "getOffhandItem"},
+            @{Type = "method"; Pattern = "func_187098_a"},
+            @{Type = "method"; Pattern = "autoTotem"},
+            @{Type = "method"; Pattern = "refillTotem"},
+            @{Type = "method"; Pattern = "totemRefill"},
+            @{Type = "method"; Pattern = "checkTotem"},
+            @{Type = "method"; Pattern = "replaceTotem"},
+            @{Type = "method"; Pattern = "autoTotemDelay"},
+            @{Type = "method"; Pattern = "offhandManager"},
+            @{Type = "method"; Pattern = "totemManager"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "offhand.*totem"},
+            @{Type = "method"; Pattern = "survivalInventory"},
+            @{Type = "method"; Pattern = "offhand.*slot"},
+            @{Type = "method"; Pattern = "totem.*check"},
+            @{Type = "method"; Pattern = "health.*totem"},
+            @{Type = "method"; Pattern = "death.*totem"},
+            @{Type = "method"; Pattern = "lowHealth.*totem"}
+        )
+    }
+    
+    "ClickPearl" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "rightClickDelay"},
+            @{Type = "method"; Pattern = "func_71011_aU"},
+            @{Type = "method"; Pattern = "fastUse"},
+            @{Type = "method"; Pattern = "fastPlace"},
+            @{Type = "method"; Pattern = "pearlDelay"},
+            @{Type = "method"; Pattern = "useItemDelay"},
+            @{Type = "method"; Pattern = "reduceDelay"},
+            @{Type = "method"; Pattern = "clickDelay"},
+            @{Type = "method"; Pattern = "fastPearl"},
+            @{Type = "method"; Pattern = "instantUse"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "useItemDelay"},
+            @{Type = "method"; Pattern = "pearlDelay"},
+            @{Type = "method"; Pattern = "enderPearl"},
+            @{Type = "method"; Pattern = "rightClick"},
+            @{Type = "method"; Pattern = "useItem"},
+            @{Type = "method"; Pattern = "itemUseCooldown"},
+            @{Type = "method"; Pattern = "cooldown.*reduce"}
+        )
+    }
+    
+    "Fly" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "onUpdate"},
+            @{Type = "method"; Pattern = "moveEntity"},
+            @{Type = "method"; Pattern = "setMotion"},
+            @{Type = "method"; Pattern = "noClip"},
+            @{Type = "method"; Pattern = "setNoGravity"},
+            @{Type = "method"; Pattern = "fly"},
+            @{Type = "method"; Pattern = "flight"},
+            @{Type = "method"; Pattern = "hover"},
+            @{Type = "method"; Pattern = "antiFall"},
+            @{Type = "method"; Pattern = "creativeFly"},
+            @{Type = "method"; Pattern = "jetpack"},
+            @{Type = "method"; Pattern = "airJump"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "motionY"},
+            @{Type = "method"; Pattern = "fallDistance"},
+            @{Type = "method"; Pattern = "onGround"},
+            @{Type = "method"; Pattern = "jump"},
+            @{Type = "method"; Pattern = "velocity"},
+            @{Type = "method"; Pattern = "flying"},
+            @{Type = "method"; Pattern = "airborne"}
+        )
+    }
+    
+    "Speed" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "setSpeed"},
+            @{Type = "method"; Pattern = "moveSpeed"},
+            @{Type = "method"; Pattern = "speedModifier"},
+            @{Type = "method"; Pattern = "motionX.*=.*motionX.*\*"},
+            @{Type = "method"; Pattern = "motionZ.*=.*motionZ.*\*"},
+            @{Type = "method"; Pattern = "horizontalCollision"},
+            @{Type = "method"; Pattern = "strafe"},
+            @{Type = "method"; Pattern = "speedHack"},
+            @{Type = "method"; Pattern = "bunnyHop"},
+            @{Type = "method"; Pattern = "timerSpeed"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "motionX"},
+            @{Type = "method"; Pattern = "motionZ"},
+            @{Type = "method"; Pattern = "movement.*speed"},
+            @{Type = "method"; Pattern = "moveForward"},
+            @{Type = "method"; Pattern = "moveStrafing"},
+            @{Type = "method"; Pattern = "sprint"},
+            @{Type = "method"; Pattern = "velocity"},
+            @{Type = "method"; Pattern = "acceleration"}
+        )
+    }
+    
+    "KillAura" = @{
+        Critical = @(
+            @{Type = "method"; Pattern = "killAura"},
+            @{Type = "method"; Pattern = "attackAll"},
+            @{Type = "method"; Pattern = "multiAttack"},
+            @{Type = "method"; Pattern = "entityList.*attack"},
+            @{Type = "method"; Pattern = "for.*Entity.*attack"},
+            @{Type = "method"; Pattern = "radiusAttack"},
+            @{Type = "method"; Pattern = "areaAttack"}
+        )
+        Suspicious = @(
+            @{Type = "method"; Pattern = "entityList"},
+            @{Type = "method"; Pattern = "world.*entities"},
+            @{Type = "method"; Pattern = "getEntities"},
+            @{Type = "method"; Pattern = "for.*entity"},
+            @{Type = "method"; Pattern = "multiple.*target"},
+            @{Type = "method"; Pattern = "radius.*check"}
+        )
+    }
 }
 
-function Decrypt-AES {
-    param([string]$Base64All, [string]$Key)
-    $allBytes = [Convert]::FromBase64String($Base64All)
-    if ($allBytes.Length -lt 17) { throw "Invalid data." }
-    $aes = New-AesFromKey -key $Key
-    $aes.IV = $allBytes[0..15]
-    $cipher = $allBytes[16..($allBytes.Length - 1)]
-    $plainBytes = $aes.CreateDecryptor().TransformFinalBlock($cipher, 0, $cipher.Length)
-    return [System.Text.Encoding]::UTF8.GetString($plainBytes)
+$ObfuscationPatterns = @{
+    "ProGuard" = @(
+        '[a-z]{1,2}\.[a-z]{1,2}\.[a-z]{1,2}',
+        '\b[a-z]{1,2}\b',
+        'class_[a-zA-Z]+',
+        'field_[a-zA-Z]+',
+        'method_[a-zA-Z]+'
+    )
+    "MCP" = @(
+        'func_\d+',
+        'field_\d+',
+        'p_\d+'
+    )
+    "Allatori" = @(
+        '[^\u0000-\u007F]',
+        'ï', '¿', '½',
+        'ￃﾁ', 'ￃﾂ', 'ￃﾃ'
+    )
+    "Zelix" = @(
+        'Z\.', 'Y\.', 'X\.',
+        '_\$\d+',
+        '\$[A-Z]\$'
+    )
+    "Colonial" = @(
+        '_[0-9a-zA-Z]{16,}',
+        '[a-z]+[0-9]+[a-z]+[0-9]+',
+        '[A-Z][a-z]+[0-9]+[A-Z]',
+        'lllll|iiiii|ooooo',
+        'I1I1I|O0O0O',
+        'var_[0-9a-fA-F]+',
+        'field_[0-9a-fA-F]+',
+        'method_[0-9a-fA-F]+'
+    )
 }
 
-function Read-PasswordMasked {
-    param([string]$prompt = "Enter password: ")
-    $password = ""
-    Write-Host -NoNewline $prompt
-    while ($true) {
-        $key = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-        if ($key.VirtualKeyCode -eq 13) { Write-Host ""; break }
-        elseif ($key.VirtualKeyCode -eq 8) {
-            if ($password.Length -gt 0) {
-                $password = $password.Substring(0,$password.Length-1)
-                $cursor = $Host.UI.RawUI.CursorPosition
-                if ($cursor.X -gt 0) {
-                    $Host.UI.RawUI.CursorPosition = @{X = $cursor.X - 1; Y = $cursor.Y}
-                    Write-Host -NoNewline " "
-                    $Host.UI.RawUI.CursorPosition = @{X = $cursor.X - 1; Y = $cursor.Y}
+function Ensure-Java {
+    try {
+        $ver = & java -version 2>&1
+        if ($LASTEXITCODE -ne 0) { throw "Java не обнаружена в PATH." }
+        Write-Host "✓ Java найдена" -ForegroundColor Green
+    } catch {
+        Write-Error "❌ Требуется Java (JRE/JDK) в PATH."
+        exit 2
+    }
+}
+
+function Download-CFR {
+    param($destPath, $url)
+    if ((Test-Path $destPath) -and (-not $Overwrite)) { 
+        Write-Host "✓ CFR уже скачан" -ForegroundColor Green
+        return 
+    }
+    Write-Host "📥 Скачиваем CFR..." -ForegroundColor Cyan
+    try {
+        Invoke-WebRequest -Uri $url -OutFile $destPath -UseBasicParsing
+        Write-Host "✓ CFR успешно скачан" -ForegroundColor Green
+    } catch {
+        Write-Error "❌ Ошибка скачивания CFR: $($_.Exception.Message)"
+        exit 3
+    }
+}
+
+function Decompile-Jar {
+    param([string]$JarPath, [string]$OutRoot)
+
+    $base = [IO.Path]::GetFileNameWithoutExtension($JarPath)
+    $outDir = Join-Path $OutRoot $base
+    
+    if ((Test-Path $outDir) -and (-not $Overwrite)) { 
+        Write-Host "  ⏭️  Пропускаем (уже существует): $base" -ForegroundColor Yellow
+        return 
+    }
+    
+    if (Test-Path $outDir) {
+        Remove-Item -Path $outDir -Recurse -Force
+    }
+    
+    New-Item -Path $outDir -ItemType Directory -Force | Out-Null
+
+    Write-Host "  🔨 Декомпилируем: $base" -ForegroundColor Cyan
+
+    $tempDir = Join-Path $outDir "_tmp"
+    New-Item -Path $tempDir -ItemType Directory -Force | Out-Null
+
+    $process = Start-Process -FilePath "java" -ArgumentList @("-jar", $CfrLocalPath, $JarPath, "--outputdir", $tempDir, "--silent", "true") -NoNewWindow -Wait -PassThru
+    
+    if ($process.ExitCode -eq 0) {
+        $javaFiles = Get-ChildItem -Path $tempDir -Recurse -Filter *.java
+        foreach ($file in $javaFiles) {
+            $relativePath = $file.FullName.Replace($tempDir, "").TrimStart("\")
+            $targetDir = Join-Path $outDir (Split-Path $relativePath -Parent)
+            if (-not (Test-Path $targetDir)) {
+                New-Item -Path $targetDir -ItemType Directory -Force | Out-Null
+            }
+            Copy-Item $file.FullName -Destination (Join-Path $outDir $relativePath) -Force
+        }
+        Write-Host "  ✓ Успешно: $base ($($javaFiles.Count) файлов)" -ForegroundColor Green
+    } else {
+        Write-Host "  ❌ Ошибка декомпиляции: $base" -ForegroundColor Red
+    }
+
+    Remove-Item -Path $tempDir -Recurse -Force -ErrorAction SilentlyContinue
+}
+
+function Extract-Classes {
+    Write-Host "`n" + "=" * 70 -ForegroundColor Cyan
+    Write-Host "             ЭТАП 1: ИЗВЛЕЧЕНИЕ КЛАССОВ ИЗ JAR" -ForegroundColor Yellow
+    Write-Host "=" * 70 -ForegroundColor Cyan
+    
+    Write-Host "Входная папка: $InputDir" -ForegroundColor Gray
+    Write-Host "Выходная папка: $OutputRoot" -ForegroundColor Gray
+    Write-Host ""
+
+    New-Item -Path $ToolsRoot -ItemType Directory -Force | Out-Null
+    New-Item -Path $OutputRoot -ItemType Directory -Force | Out-Null
+
+    Ensure-Java
+
+    Download-CFR -destPath $CfrLocalPath -url $CfrUrl
+
+    $jarFiles = Get-ChildItem -Path $InputDir -Recurse -Filter *.jar -File
+    Write-Host "Найдено JAR файлов: $($jarFiles.Count)" -ForegroundColor Cyan
+
+    if ($jarFiles.Count -eq 0) {
+        Write-Error "❌ JAR файлы не найдены в указанной директории"
+        exit 1
+    }
+
+    $counter = 0
+    foreach ($jar in $jarFiles) {
+        $counter++
+        Write-Host "[$counter/$($jarFiles.Count)] " -NoNewline -ForegroundColor Gray
+        try {
+            Decompile-Jar -JarPath $jar.FullName -OutRoot $OutputRoot
+        } catch {
+            Write-Host "  ❌ Ошибка: $($jar.Name) - $($_.Exception.Message)" -ForegroundColor Red
+        }
+    }
+
+    Write-Host "`n✅ Извлечение классов завершено!" -ForegroundColor Green
+    return $OutputRoot
+}
+
+function Get-CodeContext {
+    param([array]$Lines, [int]$LineNumber, [int]$ContextSize)
+    
+    $start = [Math]::Max(1, $LineNumber - $ContextSize)
+    $end = [Math]::Min($Lines.Count, $LineNumber + $ContextSize)
+    
+    $context = @()
+    for ($i = $start; $i -le $end; $i++) {
+        $prefix = if ($i -eq $LineNumber) { ">>> " } else { "    " }
+        $context += "$prefix$i`: $($Lines[$i-1])"
+    }
+    
+    return $context -join "`n"
+}
+
+function Find-CheatPatterns {
+    param([string]$FilePath, [string]$JarName)
+    
+    $results = @()
+    
+    try {
+        $content = Get-Content -Path $FilePath -Raw -ErrorAction Stop
+        $lines = Get-Content -Path $FilePath
+        $fileName = Split-Path $FilePath -Leaf
+        
+        foreach ($cheatCategory in $CheatMappings.Keys) {
+            $config = $CheatMappings[$cheatCategory]
+            
+            foreach ($pattern in $config.Critical) {
+                try {
+                    $regexOptions = [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+                    $matches = [regex]::Matches($content, $pattern.Pattern, $regexOptions)
+                    
+                    foreach ($match in $matches) {
+                        $lineNumber = 0
+                        $currentPos = 0
+                        for ($i = 0; $i -lt $lines.Count; $i++) {
+                            $currentPos += $lines[$i].Length + 1
+                            if ($currentPos -ge $match.Index) {
+                                $lineNumber = $i + 1
+                                break
+                            }
+                        }
+                        
+                        if ($lineNumber -gt 0) {
+                            $context = Get-CodeContext -Lines $lines -LineNumber $lineNumber -ContextSize $ContextLines
+                            
+                            $results += [PSCustomObject]@{
+                                JarName = $JarName
+                                FileName = $fileName
+                                LineNumber = $lineNumber
+                                CheatCategory = $cheatCategory
+                                PatternType = $pattern.Type
+                                Pattern = $pattern.Pattern
+                                Confidence = "HIGH"
+                                Context = $context
+                                MatchText = $match.Value
+                            }
+                        }
+                    }
+                }
+                catch {
+                    Write-Warning "Ошибка в паттерне $($pattern.Pattern): $($_.Exception.Message)"
                 }
             }
         }
-        elseif ($key.Character -ne "") {
-            $password += $key.Character
-            Write-Host -NoNewline "*"
+    }
+    catch {
+        Write-Warning "Не удалось прочитать файл $FilePath"
+    }
+    
+    return $results
+}
+
+function Test-Obfuscation {
+    param([string]$Content)
+    
+    $obfuscationResults = @()
+    
+    foreach ($obfType in $ObfuscationPatterns.Keys) {
+        $score = 0
+        foreach ($pattern in $ObfuscationPatterns[$obfType]) {
+            try {
+                $matches = [regex]::Matches($Content, $pattern)
+                $score += $matches.Count
+            }
+            catch {
+            }
+        }
+        
+        if ($score -gt 0) {
+            $obfuscationResults += [PSCustomObject]@{
+                Type = $obfType
+                Score = $score
+            }
         }
     }
-    return $password
+    
+    return $obfuscationResults | Sort-Object Score -Descending
 }
 
-if ([string]::IsNullOrWhiteSpace($embeddedEncrypted)) {
-    Write-Host "No embedded encrypted data found." -ForegroundColor Red
-    exit 1
-}
-
-$key = Read-PasswordMasked "Enter key: "
-
-try {
-    $plain = Decrypt-AES -Base64All $embeddedEncrypted -Key $key
-} catch {
-    Write-Host "Decryption failed: $($_.Exception.Message)" -ForegroundColor Red
-    exit 1
-}
-
-$tempFile = Join-Path $env:TEMP ("decrypted_script_{0}.ps1" -f ([guid]::NewGuid()))
-try {
-    [System.IO.File]::WriteAllText($tempFile, $plain, [System.Text.Encoding]::UTF8)
-} catch {
-    Write-Host "Unable to write temporary file: $($_.Exception.Message)" -ForegroundColor Red
-    exit 1
-}
-
-$pwshExe = (Get-Command pwsh.exe -ErrorAction SilentlyContinue).Source
-if (-not $pwshExe) { $pwshExe = (Get-Command powershell.exe -ErrorAction SilentlyContinue).Source }
-
-if ($pwshExe) {
-    $args = "-NoProfile -ExecutionPolicy Bypass -File `"$tempFile`""
-    try {
-        Start-Process -FilePath $pwshExe -ArgumentList $args -NoNewWindow -Wait -ErrorAction Stop
-    } catch {
-        Write-Host "Fallback execution..." -ForegroundColor Yellow
-        try { & $pwshExe -NoProfile -ExecutionPolicy Bypass -Command "& { . `"$tempFile`" }" } catch { Write-Host "Execution failed: $($_.Exception.Message)" -ForegroundColor Red }
+function Get-JarAnalysisResult {
+    param([string]$JarPath, [string]$JarName)
+    
+    $cheatResults = @()
+    $obfuscationTypes = @{}
+    
+    $javaFiles = Get-ChildItem -Path $JarPath -Recurse -Filter "*.java"
+    
+    Write-Host "    📊 Анализ $($javaFiles.Count) файлов..." -ForegroundColor Gray
+    
+    foreach ($javaFile in $javaFiles) {
+        $fileCheatResults = Find-CheatPatterns -FilePath $javaFile.FullName -JarName $JarName
+        $cheatResults += $fileCheatResults
+        
+        try {
+            $content = Get-Content -Path $javaFile.FullName -Raw -ErrorAction Stop
+            $fileObfuscation = Test-Obfuscation -Content $content
+            foreach ($obf in $fileObfuscation) {
+                if (-not $obfuscationTypes.ContainsKey($obf.Type)) {
+                    $obfuscationTypes[$obf.Type] = 0
+                }
+                $obfuscationTypes[$obf.Type] += $obf.Score
+            }
+        }
+        catch {
+        }
     }
-} else {
-    Write-Host "No PowerShell executable found." -ForegroundColor Red
+    
+    $highConfidenceCount = ($cheatResults | Where-Object { $_.Confidence -eq "HIGH" }).Count
+    $threatLevel = if ($highConfidenceCount -ge $HighConfidenceThreshold) { 
+        "HIGH" 
+    } elseif ($highConfidenceCount -gt 0) { 
+        "MEDIUM" 
+    } elseif ($cheatResults.Count -gt 0) { 
+        "LOW" 
+    } else { 
+        "CLEAN" 
+    }
+    
+    return @{
+        JarName = $JarName
+        ThreatLevel = $threatLevel
+        CheatResults = $cheatResults
+        ObfuscationTypes = $obfuscationTypes
+        TotalFiles = $javaFiles.Count
+        TotalDetections = $cheatResults.Count
+        HighConfidenceDetections = $highConfidenceCount
+    }
 }
 
-try { Remove-Item -Path $tempFile -Force -ErrorAction SilentlyContinue } catch {}
+function Analyze-Classes {
+    param([string]$SourceDirectory)
+    
+    Write-Host "`n" + "=" * 70 -ForegroundColor Cyan
+    Write-Host "             ЭТАП 2: АНАЛИЗ ЧИТЕРСКИХ МОДИФИКАЦИЙ" -ForegroundColor Yellow
+    Write-Host "=" * 70 -ForegroundColor Cyan
+    Write-Host "Анализируемая папка: $SourceDirectory" -ForegroundColor Gray
+    Write-Host ""
+    
+    $jarFolders = Get-ChildItem -Path $SourceDirectory -Directory
+    $analysisResults = @()
+    $threatSummary = @{
+        HIGH = 0
+        MEDIUM = 0
+        LOW = 0
+        CLEAN = 0
+        OBFUSCATED = 0
+    }
+    
+    foreach ($jarFolder in $jarFolders) {
+        Write-Host "🔍 Анализируем: " -NoNewline -ForegroundColor Cyan
+        Write-Host $jarFolder.Name -ForegroundColor White
+        
+        $jarResult = Get-JarAnalysisResult -JarPath $jarFolder.FullName -JarName $jarFolder.Name
+        $analysisResults += $jarResult
+        
+        $threatSummary[$jarResult.ThreatLevel]++
+        if ($jarResult.ObfuscationTypes.Count -gt 0) {
+            $threatSummary.OBFUSCATED++
+        }
+        
+        $threatColor = switch ($jarResult.ThreatLevel) {
+            "HIGH" { "Red" }
+            "MEDIUM" { "Yellow" }
+            "LOW" { "Magenta" }
+            default { "Green" }
+        }
+        
+        Write-Host "  Уровень угрозы: " -NoNewline -ForegroundColor Gray
+        Write-Host $jarResult.ThreatLevel -ForegroundColor $threatColor
+        
+        if ($jarResult.TotalDetections -gt 0) {
+            Write-Host "  Обнаружено совпадений: " -NoNewline -ForegroundColor Gray
+            Write-Host "$($jarResult.TotalDetections) " -NoNewline -ForegroundColor White
+            Write-Host "($($jarResult.HighConfidenceDetections) высокой уверенности)" -ForegroundColor Red
+            
+            $cheatCategories = $jarResult.CheatResults | Group-Object CheatCategory | Sort-Object Count -Descending
+            Write-Host "  Категории читов:" -ForegroundColor Gray
+            foreach ($category in $cheatCategories) {
+                $highCount = ($category.Group | Where-Object { $_.Confidence -eq "HIGH" }).Count
+                Write-Host "    - $($category.Name): $($category.Count) ($highCount высокой уверенности)" -ForegroundColor White
+            }
+            
+            $highExamples = $jarResult.CheatResults | Where-Object { $_.Confidence -eq "HIGH" } | Select-Object -First 2
+            if ($highExamples.Count -gt 0) {
+                Write-Host "  Примеры обнаружений:" -ForegroundColor Gray
+                foreach ($example in $highExamples) {
+                    Write-Host "    Файл: $($example.FileName):$($example.LineNumber)" -ForegroundColor DarkYellow
+                    Write-Host "    Паттерн: $($example.Pattern)" -ForegroundColor DarkCyan
+                    Write-Host "    Контекст:" -ForegroundColor DarkGray
+                    $example.Context -split "`n" | ForEach-Object { Write-Host "      $_" -ForegroundColor Gray }
+                    Write-Host ""
+                }
+            }
+        } else {
+            Write-Host "  Обнаружено совпадений: 0" -ForegroundColor Green
+        }
+        
+        if ($jarResult.ObfuscationTypes.Count -gt 0) {
+            Write-Host "  Обфускация: " -NoNewline -ForegroundColor Gray
+            $obfTypes = ($jarResult.ObfuscationTypes.GetEnumerator() | Sort-Object Value -Descending | Select-Object -First 3).Key -join ", "
+            Write-Host $obfTypes -ForegroundColor Magenta
+        }
+        
+        Write-Host ""
+    }
+    
+    Write-Host "=" * 70 -ForegroundColor Cyan
+    Write-Host "                     СВОДКА АНАЛИЗА" -ForegroundColor Yellow
+    Write-Host "=" * 70 -ForegroundColor Cyan
+    
+    Write-Host "📊 Общая статистика:" -ForegroundColor White
+    Write-Host "   Всего JAR файлов: $($jarFolders.Count)" -ForegroundColor Cyan
+    Write-Host "   🚨 Высокая угроза: $($threatSummary.HIGH)" -ForegroundColor Red
+    Write-Host "   ⚠  Средняя угроза: $($threatSummary.MEDIUM)" -ForegroundColor Yellow
+    Write-Host "   🔍 Низкая угроза: $($threatSummary.LOW)" -ForegroundColor Magenta
+    Write-Host "   ✅ Чистые: $($threatSummary.CLEAN)" -ForegroundColor Green
+    Write-Host "   🎭 Обфусцированные: $($threatSummary.OBFUSCATED)" -ForegroundColor Magenta
+    
+    $allDetections = $analysisResults | ForEach-Object { $_.CheatResults } | Group-Object CheatCategory | Sort-Object Count -Descending
+    
+    if ($allDetections.Count -gt 0) {
+        Write-Host "`n📈 Статистика по категориям читов:" -ForegroundColor White
+        foreach ($detection in $allDetections) {
+            $highCount = ($detection.Group | Where-Object { $_.Confidence -eq "HIGH" }).Count
+            Write-Host "   - $($detection.Name): $($detection.Count) обнаружений ($highCount высокой уверенности)" -ForegroundColor Cyan
+        }
+    }
+    
+    if ($threatSummary.HIGH -gt 0) {
+        Write-Host "`n🚨 ВНИМАНИЕ: Обнаружены файлы с высокой угрозой!" -ForegroundColor Red -BackgroundColor Black
+        $highThreatJars = $analysisResults | Where-Object { $_.ThreatLevel -eq "HIGH" }
+        Write-Host "   Подозрительные файлы:" -ForegroundColor Yellow
+        foreach ($jar in $highThreatJars) {
+            Write-Host "   - $($jar.JarName)" -ForegroundColor Red
+        }
+    } else {
+        Write-Host "`n✅ Высокорисковые читы не обнаружены" -ForegroundColor Green
+    }
+    
+    return $analysisResults
+}
+
+function Cleanup-ExtractedClasses {
+    param([string]$ExtractedPath)
+    
+    Write-Host "`n" + "=" * 70 -ForegroundColor Cyan
+    Write-Host "             ЭТАП 3: ОЧИСТКА ВРЕМЕННЫХ ФАЙЛОВ" -ForegroundColor Yellow
+    Write-Host "=" * 70 -ForegroundColor Cyan
+    
+    if (Test-Path $ExtractedPath) {
+        try {
+            Remove-Item -Path $ExtractedPath -Recurse -Force
+            Write-Host "✅ Временные файлы удалены: $ExtractedPath" -ForegroundColor Green
+        } catch {
+            Write-Host "⚠️  Не удалось удалить временные файлы: $($_.Exception.Message)" -ForegroundColor Yellow
+        }
+    } else {
+        Write-Host "ℹ️  Временные файлы уже удалены" -ForegroundColor Gray
+    }
+}
+
+function Start-Analysis {
+    Write-Host "🚀 ЗАПУСК АВТОМАТИЗИРОВАННОГО АНАЛИЗА МОДОВ" -ForegroundColor Magenta
+    Write-Host "Версия: 2.1 | Расширенное обнаружение хитбоксов" -ForegroundColor Gray
+    Write-Host ""
+
+    if (-not (Test-Path $InputDir)) {
+        Write-Error "❌ Входная директория не существует: $InputDir"
+        exit 1
+    }
+
+    $extractedPath = Extract-Classes
+    $analysisResults = Analyze-Classes -SourceDirectory $extractedPath
+    Cleanup-ExtractedClasses -ExtractedPath $extractedPath
+
+    Write-Host "`n🎉 ВЕСЬ ПРОЦЕСС ЗАВЕРШЕН!" -ForegroundColor Green
+    Write-Host "Для повторного анализа запустите скрипт с параметром -Overwrite" -ForegroundColor Gray
+    
+    return $analysisResults
+}
+
+$analysisResults = Start-Analysis
