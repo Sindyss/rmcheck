@@ -1,9 +1,6 @@
-Clear
-
 param(
     [Parameter(Mandatory=$true)]
     [string]$InputDir,
-    
     [string]$OutputRoot = "C:\modscan",
     [string]$ToolsRoot = "$env:USERPROFILE\decompiler-tools",
     [string]$CfrFileName = "cfr.jar",
@@ -24,7 +21,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "getEntityBoundingBox"},
             @{Type = "method"; Pattern = "setEntityBoundingBox"},
             @{Type = "method"; Pattern = "getBoundingBox"},
-            
             @{Type = "method"; Pattern = "boundingBox.*expand"},
             @{Type = "method"; Pattern = "boundingBox.*grow"},
             @{Type = "method"; Pattern = "boundingBox.*scale"},
@@ -32,36 +28,30 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "expand.*boundingBox"},
             @{Type = "method"; Pattern = "grow.*boundingBox"},
             @{Type = "method"; Pattern = "scale.*boundingBox"},
-            
             @{Type = "method"; Pattern = "minX\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "maxX\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "minY\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "maxY\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "minZ\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "maxZ\s*[\-\+]\s*[\d\.]"},
-            
             @{Type = "method"; Pattern = "minX\s*=\s*.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "maxX\s*=\s*.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "minY\s*=\s*.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "maxY\s*=\s*.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "minZ\s*=\s*.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "maxZ\s*=\s*.*[\-\+].*[\d\.]"},
-            
             @{Type = "method"; Pattern = "cD\(\)\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "cH\(\)\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "cc\(\).b"},
             @{Type = "method"; Pattern = "cc\(\).e"},
-            
             @{Type = "method"; Pattern = "new dci\(.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "new AABB\(.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "dci\(.*[\-\+].*[\d\.]"},
             @{Type = "method"; Pattern = "AABB\(.*[\-\+].*[\d\.]"},
-            
             @{Type = "field"; Pattern = "field_72338_b"},
             @{Type = "field"; Pattern = "field_72337_e"},
             @{Type = "field"; Pattern = "field_72333_a"},
             @{Type = "field"; Pattern = "field_72336_d"},
-            
             @{Type = "method"; Pattern = "expandHitbox"},
             @{Type = "method"; Pattern = "growHitbox"},
             @{Type = "method"; Pattern = "resizeHitbox"},
@@ -71,19 +61,16 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "getHitbox"},
             @{Type = "method"; Pattern = "updateHitbox"},
             @{Type = "method"; Pattern = "adjustHitbox"},
-            
             @{Type = "method"; Pattern = "collisionBox"},
             @{Type = "method"; Pattern = "getCollisionBox"},
             @{Type = "method"; Pattern = "setCollisionBox"},
             @{Type = "method"; Pattern = "collisionBoundingBox"},
-            
             @{Type = "method"; Pattern = "size.*hitbox"},
             @{Type = "method"; Pattern = "hitbox.*size"},
             @{Type = "method"; Pattern = "setSize.*hitbox"},
             @{Type = "method"; Pattern = "hitbox.*width"},
             @{Type = "method"; Pattern = "hitbox.*height"},
             @{Type = "method"; Pattern = "hitbox.*scale"},
-            
             @{Type = "method"; Pattern = "player.*boundingBox"},
             @{Type = "method"; Pattern = "entity.*boundingBox"},
             @{Type = "method"; Pattern = "player.*a\(.*dci"},
@@ -91,14 +78,12 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "attack.*boundingBox"},
             @{Type = "method"; Pattern = "hitbox.*reach"},
             @{Type = "method"; Pattern = "reach.*hitbox"},
-            
             @{Type = "method"; Pattern = "flag.*[\d\.]"},
             @{Type = "method"; Pattern = "hitbox.*flag"},
             @{Type = "method"; Pattern = "config.*hitbox"},
             @{Type = "method"; Pattern = "hitbox.*config"},
             @{Type = "method"; Pattern = "setting.*hitbox"},
             @{Type = "method"; Pattern = "hitbox.*setting"},
-            
             @{Type = "method"; Pattern = "minX\s*[\-\+]\s*\w+\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "maxX\s*[\-\+]\s*\w+\s*[\-\+]\s*[\d\.]"},
             @{Type = "method"; Pattern = "Math\.max.*minX"},
@@ -133,7 +118,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "maxZ"}
         )
     }
-    
     "TriggerBot" = @{
         Critical = @(
             @{Type = "method"; Pattern = "clickMouse"},
@@ -163,7 +147,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "leftClick"}
         )
     }
-    
     "Reach" = @{
         Critical = @(
             @{Type = "method"; Pattern = "getReachDistance"},
@@ -191,7 +174,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "target.*range"}
         )
     }
-    
     "GlowESP" = @{
         Critical = @(
             @{Type = "method"; Pattern = "m_146915_"},
@@ -217,7 +199,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "wallhack"}
         )
     }
-    
     "AutoTotem" = @{
         Critical = @(
             @{Type = "method"; Pattern = "getOffhandItem"},
@@ -241,7 +222,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "lowHealth.*totem"}
         )
     }
-    
     "ClickPearl" = @{
         Critical = @(
             @{Type = "method"; Pattern = "rightClickDelay"},
@@ -265,7 +245,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "cooldown.*reduce"}
         )
     }
-    
     "Fly" = @{
         Critical = @(
             @{Type = "method"; Pattern = "onUpdate"},
@@ -291,7 +270,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "airborne"}
         )
     }
-    
     "Speed" = @{
         Critical = @(
             @{Type = "method"; Pattern = "setSpeed"},
@@ -316,7 +294,6 @@ $CheatMappings = @{
             @{Type = "method"; Pattern = "acceleration"}
         )
     }
-    
     "KillAura" = @{
         Critical = @(
             @{Type = "method"; Pattern = "killAura"},
